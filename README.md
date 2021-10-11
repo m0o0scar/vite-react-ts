@@ -11,3 +11,10 @@ npm run dev
 ```
 
 For more info regarding starting a project with community template, please see [here](https://vitejs.dev/guide/#community-templates).
+
+## Publish
+
+```
+npm run build:npm
+npm publish
+```
