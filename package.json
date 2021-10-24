@@ -5,7 +5,7 @@
   "types": "build/main.d.ts",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "vite build",
     "build:npm": "rm -rf build && tsc --project tsconfig.npm.json",
     "serve": "vite preview"
   },
