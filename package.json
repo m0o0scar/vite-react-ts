@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "build:npm": "rm -rf build && tsc --project tsconfig.npm.json",
+    "build:npm": "shx rm -rf build && tsc --project tsconfig.npm.json",
     "serve": "vite preview"
   },
   "dependencies": {
@@ -21,6 +21,7 @@
     "@types/react-dom": "^17.0.0",
     "@types/styled-components": "^5.1.21",
     "@vitejs/plugin-react": "^1.0.0",
+    "shx": "^0.3.4",
     "typescript": "^4.3.2",
     "vite": "^2.6.4"
   }
