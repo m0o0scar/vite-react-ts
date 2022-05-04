@@ -1,7 +1,11 @@
-import { createGlobalStyle } from 'styled-components';
+import { Global, css } from '@emotion/react';
 
-export const GlobalStyle = createGlobalStyle`
-  * {
-    font-family: Arial;
-  }
-`;
+export const GlobalStyle = () => (
+  <Global
+    styles={css`
+      * {
+        font-family: Arial;
+      }
+    `}
+  />
+);
