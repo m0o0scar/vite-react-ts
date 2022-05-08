@@ -1,9 +1,9 @@
 {
   "name": "vite-template-react-ts",
   "version": "0.0.0",
-  "main": "build/cjs/main.js",
-  "types": "build/cjs/main.d.ts",
+  "main": "build/esm/main.js",
   "module": "build/esm/index.js",
+  "types": "build/esm/main.d.ts",
   "files": [
     "build"
   ],
@@ -11,7 +11,7 @@
     "dev": "vite",
     "serve": "vite preview",
     "build": "vite build",
-    "build:npm": "shx rm -rf build && tsc --project tsconfig.npm.json && tsc --project tsconfig.npm.cjs.json",
+    "build:npm": "shx rm -rf build && tsc --project tsconfig.npm.json",
     "prepublish": "yarn build:npm"
   },
   "dependencies": {
