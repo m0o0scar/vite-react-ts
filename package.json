@@ -1,9 +1,9 @@
 {
   "name": "vite-template-react-ts",
   "version": "0.0.0",
-  "main": "build/esm/main.js",
-  "module": "build/esm/index.js",
-  "types": "build/esm/main.d.ts",
+  "main": "build/main.js",
+  "module": "build/main.js",
+  "types": "build/main.d.ts",
   "files": [
     "build"
   ],
