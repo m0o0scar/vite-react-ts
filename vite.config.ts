@@ -7,7 +7,7 @@ export default defineConfig(async () => {
   // https://medium.com/@dandobusiness/sharing-a-an-environment-file-across-your-mono-repo-ba06af1229ee
   const { findUp } = await import('find-up');
   const pathToEnvFile = await findUp(process.env.ENV_FILE || '.env');
-  const envDir = dirname(pathToEnvFile);
+  const envDir = pathToEnvFile ? dirname(pathToEnvFile) : undefined;
 
   return {
     // The directory from which .env files are loaded
@@ -17,7 +17,7 @@ export default defineConfig(async () => {
     plugins: [react()],
 
     optimizeDeps: {
-      include: ['react/jsx-runtime']
+      include: ['react/jsx-runtime'],
     },
-  }
+  };
 });
