@@ -1,9 +1,14 @@
 {
   "name": "vite-template-react-ts",
   "version": "0.0.0",
-  "main": "build/main.js",
-  "module": "build/main.js",
-  "types": "build/main.d.ts",
+  "module": "build/mjs/main.js",
+  "main": "build/cjs/main.js",
+  "exports": {
+    ".": {
+      "import": "./build/mjs/main.js",
+      "require": "./build/cjs/index.js"
+    }
+  },
   "files": [
     "build"
   ],
@@ -11,7 +16,10 @@
     "dev": "vite",
     "serve": "vite preview",
     "build": "vite build",
-    "build:npm": "shx rm -rf build && tsc --project tsconfig.npm.json",
+    "build:npm": "run-s build:esm build:cjs",
+    "prebuild:npm": "shx rm -rf build",
+    "build:esm": "tsc -p tsconfig.esm.json",
+    "build:cjs": "tsc -p tsconfig.cjs.json",
     "prepublish": "yarn build:npm",
     "prettier": "prettier --check 'src/**/*.{js,ts,tsx}'",
     "prettier-fix": "prettier --write \"src/**/*.{js,ts,tsx}\"",
