@@ -14,8 +14,11 @@ const About = () => (
 
 export function App() {
   return (
-    <>
+    <article className="prose">
       <h1>Hello World</h1>
+      <p>
+        <button className="btn">I am a button</button>
+      </p>
       <ul>
         <li>
           <Link to="/">Home</Link>
@@ -30,6 +33,6 @@ export function App() {
           <Route path="/" element={<Home />} />
         </Routes>
       </div>
-    </>
+    </article>
   );
 }

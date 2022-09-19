@@ -28,6 +28,8 @@
     "codecheck": "run-s prettier-fix lint-fix"
   },
   "dependencies": {
+    "@tailwindcss/typography": "^0.5.7",
+    "daisyui": "^2.28.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-router-dom": "^6.3.0",
