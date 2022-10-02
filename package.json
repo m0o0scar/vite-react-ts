@@ -8,7 +8,7 @@
     "build"
   ],
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host",
     "serve": "vite preview",
     "build": "vite build",
     "build:npm": "run-s build:esm build:cjs",
