@@ -16,10 +16,6 @@ export default defineConfig(async () => {
 
     plugins: [react()],
 
-    server: {
-      https: true,
-    },
-
     optimizeDeps: {
       include: ['react/jsx-runtime'],
     },
