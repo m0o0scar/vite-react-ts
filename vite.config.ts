@@ -1,5 +1,5 @@
 import react from '@vitejs/plugin-react';
-import { dirname } from 'path';
+import { dirname, resolve } from 'path';
 import { defineConfig } from 'vite';
 
 export default defineConfig(async () => {
@@ -15,6 +15,12 @@ export default defineConfig(async () => {
     envDir,
 
     plugins: [react()],
+
+    resolve: {
+      alias: {
+        '@': resolve(__dirname, './src'),
+      },
+    },
 
     optimizeDeps: {
       include: ['react/jsx-runtime'],
