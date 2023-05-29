@@ -5,18 +5,25 @@ import { RecoilRoot } from 'recoil';
 
 import './index.css';
 import { ErrorPage } from './pages/404';
-import { HomePage } from './pages/Home';
-import { TestPage } from './pages/Test';
+import { RootLayout } from './pages/layout';
+import { HomePage } from './pages/page';
+import { TestPage } from './pages/test/page';
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <HomePage />,
+    Component: RootLayout,
     errorElement: <ErrorPage />,
-  },
-  {
-    path: 'test',
-    element: <TestPage />,
+    children: [
+      {
+        index: true,
+        Component: HomePage,
+      },
+      {
+        path: '/test',
+        Component: TestPage,
+      },
+    ],
   },
 ]);
 
