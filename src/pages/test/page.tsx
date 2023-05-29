@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Head } from '../../components/common/Head';
 
-export function TestPage() {
+export const TestPage = () => {
   return (
     <>
       <Head title="Route Test" favemoji="💩" />
@@ -11,4 +11,4 @@ export function TestPage() {
       <div>Hi</div>
     </>
   );
-}
+};

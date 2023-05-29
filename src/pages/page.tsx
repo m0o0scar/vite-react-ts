@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import { Head } from '../components/common/Head';
 
-export function HomePage() {
+export const HomePage = () => {
   return (
     <>
       <Head title="Vite + React + TS" favemoji="🌳" />
@@ -20,4 +20,4 @@ export function HomePage() {
       </ul>
     </>
   );
-}
+};

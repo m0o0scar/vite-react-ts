@@ -1,7 +1,7 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
 
-export function RootLayout() {
+export const RootLayout = () => {
   return (
     <>
       <article className="prose max-w-full p-4">
@@ -10,4 +10,4 @@ export function RootLayout() {
       </article>
     </>
   );
-}
+};

@@ -3,7 +3,7 @@ import { Link, useRouteError } from 'react-router-dom';
 
 import { Head } from '../components/common/Head';
 
-export function ErrorPage() {
+export const ErrorPage = () => {
   const error = useRouteError() as any;
   console.log(error);
 
@@ -23,4 +23,4 @@ export function ErrorPage() {
       </article>
     </>
   );
-}
+};
