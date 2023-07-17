@@ -1,4 +1,6 @@
-import React from 'react';
+/* eslint-disable prettier/prettier */
+import './index.css';
+
 import { createRoot } from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { RecoilRoot } from 'recoil';
