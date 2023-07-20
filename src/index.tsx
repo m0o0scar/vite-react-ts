@@ -3,7 +3,6 @@ import './index.css';
 
 import { createRoot } from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import { RecoilRoot } from 'recoil';
 
 import { ErrorPage } from './pages/error';
 import { RootLayout } from './pages/layout';
@@ -31,8 +30,4 @@ const router = createBrowserRouter([
 const container = document.getElementById('root');
 const root = createRoot(container!);
 
-root.render(
-  <RecoilRoot>
-    <RouterProvider router={router} />
-  </RecoilRoot>
-);
+root.render(<RouterProvider router={router} />);
