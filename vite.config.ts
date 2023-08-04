@@ -1,8 +1,7 @@
-/* eslint-disable import/no-extraneous-dependencies */
-import react from '@vitejs/plugin-react';
 import { dirname, resolve } from 'path';
 import { defineConfig } from 'vite';
-import svgr from 'vite-plugin-svgr';
+
+import react from '@vitejs/plugin-react';
 
 export default defineConfig(async () => {
   // Sharing an environment file across your Mono-Repo | by Josh Dando | Medium
@@ -16,7 +15,7 @@ export default defineConfig(async () => {
     // https://vitejs.dev/config/#envdir
     envDir,
 
-    plugins: [svgr(), react()],
+    plugins: [react()],
 
     resolve: {
       alias: {
