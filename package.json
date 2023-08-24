@@ -1,11 +1,12 @@
 {
   "name": "vite-template-react-ts",
   "version": "0.0.0",
-  "types": "build/mjs/main.d.ts",
-  "module": "build/mjs/main.js",
-  "main": "build/cjs/main.js",
+  "types": "esm/main.d.ts",
+  "module": "esm/main.js",
+  "main": "build/main.js",
   "files": [
-    "build"
+    "build",
+    "esm"
   ],
   "scripts": {
     "start": "vercel dev",
@@ -13,7 +14,7 @@
     "serve": "vite preview",
     "build": "vite build",
     "build:npm": "run-s build:esm build:cjs",
-    "prebuild:npm": "shx rm -rf build",
+    "prebuild:npm": "shx rm -rf build esm",
     "build:esm": "tsc -p tsconfig.esm.json",
     "build:cjs": "tsc -p tsconfig.cjs.json",
     "prepublish": "yarn build:npm"
