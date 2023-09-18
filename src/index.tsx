@@ -14,6 +14,7 @@ const App = () => {
       <article className="prose max-w-full p-4">
         <h1>Hello World</h1>
         <p>This is a Vite + React + TS template</p>
+        <p>This {process.env.NODE_ENV === 'development' ? 'is' : 'is not'} a dev environment</p>
       </article>
     </>
   );
