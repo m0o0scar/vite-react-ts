@@ -1,8 +1,8 @@
+import './index.css';
+
 import { createRoot } from 'react-dom/client';
-import { Helmet } from 'react-helmet';
 
 import { Head } from './components/common/Head';
-import './index.css';
 
 const container = document.getElementById('root');
 const root = createRoot(container!);
